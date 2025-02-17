@@ -63,7 +63,14 @@ class MixLoraSparseMoe(torch.nn.Module):
         if config.model_type_ not in _compatible_model_types:
             raise NotImplementedError()
         self.forward_fn_ = getattr(self, _compatible_model_types[config.model_type_])
-
+    
+    def _esm2_forward(
+        self,
+        expert_mask: torch.Tensor,
+        hidden_states: torch.Tensor,
+        input_dtype: torch.dtype):
+        pass
+    
     def _llama_forward(
         self,
         expert_mask: torch.Tensor,
