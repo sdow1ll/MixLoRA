@@ -36,6 +36,7 @@ _compatible_model_types = {
     "mistral": "_llama_forward",
     "phi": "_phi_forward",
     "phi3": "_phi3_forward",
+    "esm2": "_esm2_forward"
 }
 
 
